@@ -1,1 +1,28 @@
-<h1>Helloooooo</h1>
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button and see how many times you get heads</p>
+
+<button onclick="myFunction()">Flip a coin</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    let times = 0;
+    let x ="";
+    let random = 0;
+    let coin = ["Heads","Tails"];
+    while (random != 1){
+        random = (Math.floor(Math.random() * 2));
+        times++;
+        x += coin[random] + "<br>";
+    }
+    x += "You got " + (times - 1) + " heads";
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
